@@ -1,0 +1,11 @@
+[Unit]
+Description=Bluetooth Auth Agent
+After=bluetooth.service
+PartOf=bluetooth.service
+
+[Service]
+EnvironmentFile=-/etc/bluetooth/agent.conf
+ExecStart=/usr/bin/env -- bt-agent --capability=NoInputNoOutput $OPTIONS
+
+[Install]
+WantedBy=bluetooth.target
