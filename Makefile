@@ -8,5 +8,3 @@ deploy: install
 	sudo systemctl stop bt-agent.service
 	sudo systemctl daemon-reload
 	sudo systemctl enable --now bt-agent.service
-	
-.PHONY: install

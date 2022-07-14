@@ -6,6 +6,7 @@ PartOf=bluetooth.service
 [Service]
 EnvironmentFile=-/etc/bluetooth/agent.conf
 ExecStart=/usr/bin/env -- bt-agent --capability=NoInputNoOutput $OPTIONS
+KillSignal=SIGINT 
 
 [Install]
 WantedBy=bluetooth.target
